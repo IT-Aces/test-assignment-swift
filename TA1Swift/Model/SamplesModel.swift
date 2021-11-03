@@ -55,7 +55,7 @@ struct SampleMessage: Hashable {
         if self.sender?.senderId == "01" {
             return SampleMessageType.incoming
         }
-        return SampleMessageType.incoming
+        return SampleMessageType.outdoring
     }
 }
 

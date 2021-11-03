@@ -32,9 +32,19 @@ class CustomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var firstPhoto: UIImageView!
     @IBOutlet weak var secondPhoto: UIImageView!
+    @IBOutlet weak var photosParentView: UIView!
     @IBOutlet weak var secondPhotoParentView: UIView!
     @IBOutlet weak var countOfPhotoLabel: UILabel!
     
+    @IBOutlet weak var timeLabel: UILabel!
+
+    
+    @IBOutlet weak var firstBuffer25cnstr: NSLayoutConstraint!
+    @IBOutlet weak var firstBuffer50cnstr: NSLayoutConstraint!
+    
+
+    @IBOutlet weak var secondBuffer25cnstr: NSLayoutConstraint!
+    @IBOutlet weak var secondBuffer50cnstr: NSLayoutConstraint!
     
     
     
@@ -56,6 +66,19 @@ extension CustomTableViewCell {
     func setup(_ data: SampleMessage) {
         
         self.mainBgView.layer.cornerRadius = 12
+        self.photosParentView.layer.cornerRadius = 12
+        if let senderName = data.sender?.senderFullName {
+            self.avatarLabel.text = String(senderName.abbr().dropLast())
+        }
+//        self.avatarLabel.text = String(data.sender?.senderFullName.abbr())
+        
+        let today = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        self.timeLabel.text = formatter.string(from: today)
+        self.timeLabel.clipsToBounds = true
+        self.timeLabel.layer.cornerRadius = 10
+
         
         switch data.messageType {
         case .incoming:
@@ -65,9 +88,10 @@ extension CustomTableViewCell {
             self.avatarLabel.layer.masksToBounds = true
             self.avatarLabel.layer.cornerRadius = self.avatarLabel.frame.width / 2.0
 //            self.avatarLabel.text =
-        default:
+        case .outdoring:
             self.avatarLabel.isHidden = true
             self.senderInfoView.isHidden = true
+            self.bufferView1.isHidden = false
             self.bufferView2.isHidden = true
         }
         
@@ -83,6 +107,10 @@ extension CustomTableViewCell {
                 self.firstPhoto.layer.masksToBounds = true
                 self.firstPhoto.layer.cornerRadius = 12
                 self.firstPhoto.image = image
+                
+                self.firstBuffer50cnstr.isActive = true
+                self.secondBuffer50cnstr.isActive = true
+                
             }
         } else {
             if let urlArray = data.media {
@@ -96,10 +124,15 @@ extension CustomTableViewCell {
                     }
                     images.append(image)
                 }
-                self.firstPhoto.image = images.first
+                self.firstPhoto.clipsToBounds = true
+                self.secondPhoto.clipsToBounds = true
+                self.firstPhoto.image = images[0]
                 self.secondPhoto.image = images[1]
                 self.countOfPhotoLabel.text = "+" + String((data.media?.count ?? 2) - 1)
             }
+            self.firstBuffer25cnstr.isActive = true
+            self.secondBuffer25cnstr.isActive = true
+            
         }
         
     }

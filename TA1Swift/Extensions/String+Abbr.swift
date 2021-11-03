@@ -7,17 +7,18 @@
 
 import UIKit
 
-//extension String {
-//
-//    func abbr(separator: String? = " ",  divider: String? = "") -> String {
-//
-//        if let separator = separator {
-//            let result = self.components(separatedBy: separator)
-//                .flatMap({ String( $0.first! ) })
-//                .joined(separator: divider)
-//
-//            return String(result)
-//        }
-//    }
-//
-//}
+extension String {
+
+    func abbr(separator: String? = " ",  divider: String? = "") -> String {
+
+        if let separator = separator, let divider = divider {
+            let result = self.components(separatedBy: separator)
+                .compactMap({ String( $0.first! ) })
+                .joined(separator: divider)
+
+            return String(result)
+        }
+        return String()
+    }
+
+}
