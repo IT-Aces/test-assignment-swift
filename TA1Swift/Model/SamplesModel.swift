@@ -42,9 +42,21 @@ struct SampleDataSource: Hashable {
     }
 }
 
+enum SampleMessageType {
+    case outdoring
+    case incoming
+}
+
 struct SampleMessage: Hashable {
     let sender: SampleSender?
     let media: [NSURL]?
+    
+    var messageType: SampleMessageType {
+        if self.sender?.senderId == "01" {
+            return SampleMessageType.incoming
+        }
+        return SampleMessageType.incoming
+    }
 }
 
 struct SampleSender: Hashable {

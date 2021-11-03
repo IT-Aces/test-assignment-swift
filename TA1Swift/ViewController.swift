@@ -8,14 +8,22 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    var dataSource: [SampleMessage]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.dataSource = []
+        
+        self.tableView.register(CustomTableViewCell.nib, forCellReuseIdentifier: CustomTableViewCell.identifier)
         
         let sampleDataSource = SampleDataSource()
         sampleDataSource.loadMessages { (messages) in
-            print("Show me \(messages)")
+            if !messages.isEmpty {
+                self.dataSource = messages
+                self.tableView.reloadData()
+            }
         }
     }
 
