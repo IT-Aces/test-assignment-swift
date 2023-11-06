@@ -3,28 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0EF69F542611BBD600D502BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69F532611BBD600D502BB /* AppDelegate.swift */; };
-		0EF69F582611BBD600D502BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69F572611BBD600D502BB /* ViewController.swift */; };
-		0EF69F5B2611BBD600D502BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EF69F592611BBD600D502BB /* Main.storyboard */; };
 		0EF69F5D2611BBD800D502BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EF69F5C2611BBD800D502BB /* Assets.xcassets */; };
 		0EF69F602611BBD800D502BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EF69F5E2611BBD800D502BB /* LaunchScreen.storyboard */; };
-		0EF69F852611BD5700D502BB /* SamplesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69F842611BD5700D502BB /* SamplesModel.swift */; };
+		B6D08A1A2AF94B2200A33E3E /* Chat in Frameworks */ = {isa = PBXBuildFile; productRef = B6D08A192AF94B2200A33E3E /* Chat */; };
+		B6D08A1C2AF94C0C00A33E3E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6D08A1B2AF94C0C00A33E3E /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0EF69F502611BBD600D502BB /* TA1Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TA1Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EF69F532611BBD600D502BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0EF69F572611BBD600D502BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0EF69F5A2611BBD600D502BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0EF69F5C2611BBD800D502BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EF69F5F2611BBD800D502BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EF69F612611BBD800D502BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EF69F692611BBE700D502BB /* TA1Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TA1Swift.entitlements; sourceTree = "<group>"; };
-		0EF69F842611BD5700D502BB /* SamplesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplesModel.swift; sourceTree = "<group>"; };
+		B6D08A162AF94A7400A33E3E /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Core; sourceTree = "<group>"; };
+		B6D08A172AF94A7900A33E3E /* Features */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Features; sourceTree = "<group>"; };
+		B6D08A1B2AF94C0C00A33E3E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6D08A1A2AF94B2200A33E3E /* Chat in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +41,11 @@
 		0EF69F472611BBD600D502BB = {
 			isa = PBXGroup;
 			children = (
+				B6D08A162AF94A7400A33E3E /* Core */,
+				B6D08A172AF94A7900A33E3E /* Features */,
 				0EF69F522611BBD600D502BB /* TA1Swift */,
 				0EF69F512611BBD600D502BB /* Products */,
+				B6D08A182AF94B2200A33E3E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,24 +60,21 @@
 		0EF69F522611BBD600D502BB /* TA1Swift */ = {
 			isa = PBXGroup;
 			children = (
-				0EF69F832611BD4200D502BB /* Model */,
 				0EF69F692611BBE700D502BB /* TA1Swift.entitlements */,
 				0EF69F532611BBD600D502BB /* AppDelegate.swift */,
-				0EF69F572611BBD600D502BB /* ViewController.swift */,
-				0EF69F592611BBD600D502BB /* Main.storyboard */,
 				0EF69F5C2611BBD800D502BB /* Assets.xcassets */,
 				0EF69F5E2611BBD800D502BB /* LaunchScreen.storyboard */,
 				0EF69F612611BBD800D502BB /* Info.plist */,
+				B6D08A1B2AF94C0C00A33E3E /* Colors.xcassets */,
 			);
 			path = TA1Swift;
 			sourceTree = "<group>";
 		};
-		0EF69F832611BD4200D502BB /* Model */ = {
+		B6D08A182AF94B2200A33E3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0EF69F842611BD5700D502BB /* SamplesModel.swift */,
 			);
-			path = Model;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +93,9 @@
 			dependencies = (
 			);
 			name = TA1Swift;
+			packageProductDependencies = (
+				B6D08A192AF94B2200A33E3E /* Chat */,
+			);
 			productName = TA1Swift;
 			productReference = 0EF69F502611BBD600D502BB /* TA1Swift.app */;
 			productType = "com.apple.product-type.application";
@@ -103,8 +106,9 @@
 		0EF69F482611BBD600D502BB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					0EF69F4F2611BBD600D502BB = {
 						CreatedOnToolsVersion = 12.4;
@@ -134,9 +138,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6D08A1C2AF94C0C00A33E3E /* Colors.xcassets in Resources */,
 				0EF69F602611BBD800D502BB /* LaunchScreen.storyboard in Resources */,
 				0EF69F5D2611BBD800D502BB /* Assets.xcassets in Resources */,
-				0EF69F5B2611BBD600D502BB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,8 +151,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EF69F582611BBD600D502BB /* ViewController.swift in Sources */,
-				0EF69F852611BD5700D502BB /* SamplesModel.swift in Sources */,
 				0EF69F542611BBD600D502BB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,14 +158,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0EF69F592611BBD600D502BB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0EF69F5A2611BBD600D502BB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0EF69F5E2611BBD800D502BB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -212,6 +206,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -226,7 +221,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -273,6 +268,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -281,7 +277,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -298,15 +294,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TA1Swift/TA1Swift.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T6L5U5HC92;
+				DEVELOPMENT_TEAM = TVFWA39CU8;
 				INFOPLIST_FILE = TA1Swift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.itaces.test.TA1Swift;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.torear.test.TA1Swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
@@ -321,15 +317,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TA1Swift/TA1Swift.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T6L5U5HC92;
+				DEVELOPMENT_TEAM = TVFWA39CU8;
 				INFOPLIST_FILE = TA1Swift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.itaces.test.TA1Swift;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.torear.test.TA1Swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
@@ -359,6 +355,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B6D08A192AF94B2200A33E3E /* Chat */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Chat;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0EF69F482611BBD600D502BB /* Project object */;
 }
